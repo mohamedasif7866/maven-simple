@@ -13,11 +13,10 @@ steps:
   inputs:
     mavenPomFile: 'pom.xml'  # Path to your pom.xml file
     goals: 'clean install'  # Maven goals you want to run
-    options: '-X'  # Optional: additional Maven options
+    options: '-X -DskipTests=true'  # Combine additional Maven options here
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'  # Specify the JDK version you need
     mavenVersionOption: 'Default'
     publishJUnitResults: true
     testResultsFiles: '**/target/surefire-reports/*.xml'  # Path to your test results
     codeCoverageToolOption: 'None'  # Change if you are using a coverage tool
-    options: '-DskipTests=true'  # Example option to skip tests
